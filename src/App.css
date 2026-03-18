@@ -222,16 +222,14 @@
 }
 
 .score-cell {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.4rem;
+  text-align: center;
 }
 
 .score-cell input[type='range'] {
   width: 80px;
   accent-color: #ff9800;
   height: 5px;
+  vertical-align: middle;
 }
 
 .score-value {
@@ -239,6 +237,9 @@
   font-weight: 700;
   color: #ff9800;
   min-width: 1.2rem;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.4rem;
 }
 
 /* ── Results ── */
