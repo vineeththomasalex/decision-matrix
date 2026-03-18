@@ -1,4 +1,4 @@
-import { useState, useCallback, useMemo, useEffect } from 'react';
+import { useState, useCallback, useMemo } from 'react';
 import './App.css';
 import type { Criterion, Option, Scores } from './utils/calculator';
 import { calculateResults } from './utils/calculator';
@@ -51,16 +51,6 @@ function App() {
   const [options, setOptions] = useState<Option[]>(() => getInitialState().options);
   const [criteria, setCriteria] = useState<Criterion[]>(() => getInitialState().criteria);
   const [scores, setScores] = useState<Scores>(() => getInitialState().scores);
-
-  // Restore from URL on mount (handles shared links)
-  useEffect(() => {
-    const s = getStateFromURL();
-    if (s) {
-      setOptions(s.options);
-      setCriteria(s.criteria);
-      setScores(s.scores);
-    }
-  }, []);
 
   const results = useMemo(
     () => calculateResults(options, criteria, scores),
