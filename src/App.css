@@ -1,0 +1,377 @@
+/* ── App Shell ── */
+.app-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.app-header h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.25rem;
+}
+
+.app-header p {
+  color: #999;
+  font-size: 0.95rem;
+}
+
+/* ── Section headers ── */
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.section-header h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ddd;
+}
+
+/* ── Buttons ── */
+.btn {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  border-radius: 6px;
+  transition: background 0.15s;
+}
+
+.btn-add {
+  background: #2a2a2a;
+  color: #4CAF50;
+  padding: 0.4rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.btn-add:hover {
+  background: #333;
+}
+
+.btn-remove {
+  background: transparent;
+  color: #e57373;
+  font-size: 1.3rem;
+  padding: 0 0.4rem;
+  line-height: 1;
+}
+.btn-remove:hover {
+  color: #ff5252;
+}
+
+.btn-remove-sm {
+  background: transparent;
+  color: #e57373;
+  font-size: 1rem;
+  padding: 0 0.3rem;
+  line-height: 1;
+  border: none;
+  cursor: pointer;
+}
+.btn-remove-sm:hover {
+  color: #ff5252;
+}
+
+/* ── Criteria List ── */
+.criteria-list {
+  background: #1e1e1e;
+  border-radius: 10px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.criterion-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #2a2a2a;
+}
+.criterion-row:last-child {
+  border-bottom: none;
+}
+
+.criterion-name {
+  background: #2a2a2a;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 0.4rem 0.6rem;
+  color: #e0e0e0;
+  font-size: 0.9rem;
+  width: 180px;
+}
+.criterion-name:focus {
+  outline: none;
+  border-color: #5c6bc0;
+}
+
+.weight-control {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.weight-control input[type='range'] {
+  flex: 1;
+  accent-color: #5c6bc0;
+  height: 6px;
+}
+
+.weight-badge {
+  background: #5c6bc0;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: 10px;
+  min-width: 1.6rem;
+  text-align: center;
+}
+
+/* ── Options Header ── */
+.options-header {
+  background: #1e1e1e;
+  border-radius: 10px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.options-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.option-chip {
+  display: flex;
+  align-items: center;
+  background: #2a2a2a;
+  border-radius: 8px;
+  padding: 0.3rem 0.5rem;
+  gap: 0.3rem;
+}
+
+.option-chip input {
+  background: transparent;
+  border: none;
+  color: #e0e0e0;
+  font-size: 0.9rem;
+  width: 100px;
+  padding: 0.2rem;
+}
+.option-chip input:focus {
+  outline: none;
+  border-bottom: 1px solid #5c6bc0;
+}
+
+/* ── Scoring Grid ── */
+.scoring-grid-wrapper {
+  background: #1e1e1e;
+  border-radius: 10px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  overflow-x: auto;
+}
+
+.scoring-grid-wrapper h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ddd;
+  margin-bottom: 0.75rem;
+}
+
+.scoring-grid-empty {
+  background: #1e1e1e;
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.scoring-grid table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.scoring-grid th,
+.scoring-grid td {
+  padding: 0.6rem 0.75rem;
+  text-align: center;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.scoring-grid th {
+  color: #aaa;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.scoring-grid .col-criteria {
+  text-align: left;
+  min-width: 120px;
+}
+
+.scoring-grid .col-weight {
+  width: 60px;
+}
+
+.score-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.score-cell input[type='range'] {
+  width: 80px;
+  accent-color: #ff9800;
+  height: 5px;
+}
+
+.score-value {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #ff9800;
+  min-width: 1.2rem;
+}
+
+/* ── Results ── */
+.results {
+  background: #1e1e1e;
+  border-radius: 10px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.results h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ddd;
+  margin-bottom: 1rem;
+}
+
+.results-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.result-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+}
+
+.result-row.winner {
+  background: rgba(76, 175, 80, 0.08);
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+}
+
+.result-rank {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #888;
+  min-width: 2rem;
+}
+
+.result-row.winner .result-rank {
+  color: #4CAF50;
+}
+
+.result-name {
+  min-width: 100px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.result-bar-wrapper {
+  flex: 1;
+  background: #2a2a2a;
+  border-radius: 6px;
+  height: 24px;
+  overflow: hidden;
+}
+
+.result-bar {
+  height: 100%;
+  border-radius: 6px;
+  transition: width 0.4s ease;
+  min-width: 4px;
+}
+
+.result-score {
+  font-weight: 700;
+  font-size: 0.95rem;
+  min-width: 3.5rem;
+  text-align: right;
+}
+
+.result-row.winner .result-score {
+  color: #4CAF50;
+}
+
+/* ── Share / Export ── */
+.share-export {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.btn-share,
+.btn-export {
+  padding: 0.6rem 1.4rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  transition: background 0.15s, transform 0.1s;
+}
+
+.btn-share {
+  background: #5c6bc0;
+  color: #fff;
+}
+.btn-share:hover {
+  background: #7986cb;
+}
+
+.btn-export {
+  background: #2a2a2a;
+  color: #e0e0e0;
+  border: 1px solid #444;
+}
+.btn-export:hover {
+  background: #333;
+}
+
+.btn-share:active,
+.btn-export:active {
+  transform: scale(0.97);
+}
+
+/* ── Responsive ── */
+@media (max-width: 700px) {
+  .criterion-name {
+    width: 120px;
+  }
+  .score-cell input[type='range'] {
+    width: 60px;
+  }
+  .result-name {
+    min-width: 70px;
+  }
+  .share-export {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
